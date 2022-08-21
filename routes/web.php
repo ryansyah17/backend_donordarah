@@ -37,7 +37,7 @@ Route::get(
 );
 Route::get(
     '/history/create',
-    [HistoryController::class, 'create']
+    [HistoryController::class, 'created']
 
 );
 Route::get(
