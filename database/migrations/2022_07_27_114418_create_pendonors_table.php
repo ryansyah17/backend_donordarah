@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pendonor', function (Blueprint $table) {
+        Schema::create('pendonors', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_users')->nullable();
             $table->string('name');
@@ -38,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pendonor');
+        Schema::dropIfExists('pendonors');
     }
 };
