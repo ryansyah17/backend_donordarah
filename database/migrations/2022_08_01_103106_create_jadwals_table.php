@@ -13,15 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('notification', function (Blueprint $table) {
+        Schema::create('jadwals', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('umur');
-            $table->longText('alamat');
-            $table->string('kebutuhan_darah');
-            $table->enum('goldarah', ['A', 'B', 'AB', 'O'])->nullable();
-            $table->string('resus_darah');
-            $table->string('kontak');
+            $table->string('name_stand');
+            $table->time('waktu');
+            $table->string('latitude');
+            $table->string('longitude');
+            $table->string('picture')->nullable();
             $table->timestamps();
         });
     }
@@ -33,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notification');
+        Schema::dropIfExists('jadwals');
     }
 };
